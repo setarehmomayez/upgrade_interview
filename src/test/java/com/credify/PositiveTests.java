@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.util.Random;
 
-public class WebTests extends TestUtilities {
+public class PositiveTests extends TestUtilities {
 
     @Test
     public void Validate_offer() {
@@ -67,12 +67,9 @@ public class WebTests extends TestUtilities {
 
         loginPage.enterEmail(account.getEmail());
         loginPage.enterPassword(account.getPwd());
-        OfferPage myOfferPage=loginPage.clickSignIn();
+        OfferPage myOfferPage=loginPage.navigateToOfferPage();
 
         myOfferPage.validateLoanData(loan);
-
-
-
 
     }
 

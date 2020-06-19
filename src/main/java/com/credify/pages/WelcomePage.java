@@ -13,6 +13,7 @@ public class WelcomePage extends BasePageObject{
     private By dropdown = By.xpath("//*[@id=\"root\"]/div/main/div/div/div/div/div[2]/div[2]/form/div/div/div[2]/div/select");
     private By desiredAmount = By.name("desiredAmount");
     private By checkRateBtn = By.xpath("//button[@type='submit']");
+    private By loanAmountError= By.className("sc-fzqARJ");
 
 
 
@@ -46,7 +47,10 @@ public class WelcomePage extends BasePageObject{
         log.info("Clicking on check your rate button");
         click(checkRateBtn);
         return new BasicInfoPage(driver, log);
+    }
 
+    public String getErrorMessage(){
+        return find(loanAmountError).getText();
 
     }
 
