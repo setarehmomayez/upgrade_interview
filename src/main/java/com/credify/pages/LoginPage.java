@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import java.util.Properties;
 
 public class LoginPage extends BasePageObject {
+
     private By emailElement = By.name("username");
     private By passwordElement = By.name("password");
     private By signInBtn = By.xpath("//button[@type='submit']");

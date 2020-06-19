@@ -11,7 +11,7 @@ import java.util.Random;
 public class WebTests extends TestUtilities {
 
     @Test
-    public void firstTest() {
+    public void Validate_offer() {
         log.info("Starting the Test");
 
         // open main page

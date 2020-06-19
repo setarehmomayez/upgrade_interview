@@ -13,7 +13,8 @@ public class OfferPage extends BasePageObject {
     private By monthlyPayment = By.cssSelector("[data-auto='defaultMonthlyPayment']");
     private By term = By.cssSelector("[data-auto='defaultLoanTerm']");
     private By interestRate = By.cssSelector("[data-auto='defaultLoanInterestRate']");
-    private By arp = By.cssSelector("[data-auto='defaultMoreInfoAPR']");
+    private By apr = By.cssSelector("[data-auto='defaultMoreInfoAPR']");
+    private By table=By.cssSelector("[data-auto='moreLoanOffers36']");
     private By menu = By.xpath("//div[@class='header-nav']/label[1]");
     private By signOutBtn = By.linkText("Sign Out");
 
@@ -35,7 +36,7 @@ public class OfferPage extends BasePageObject {
         loan.setInterestRate(driver.findElement(interestRate).getText());
         loan.setMonthlyPayment(driver.findElement(monthlyPayment).getText());
         loan.setTerm(driver.findElement(term).getText());
-        loan.setArp(driver.findElement(arp).getText());
+        loan.setApr(driver.findElement(apr).getText());
         return loan;
     }
 
@@ -44,7 +45,7 @@ public class OfferPage extends BasePageObject {
         softAssert.assertEquals(loan.getInterestRate(), driver.findElement(interestRate).getText());
         softAssert.assertEquals(loan.getMonthlyPayment(), driver.findElement(monthlyPayment).getText());
         softAssert.assertEquals(loan.getTerm(), driver.findElement(term).getText());
-        softAssert.assertEquals(loan.getArp(), driver.findElement(arp).getText());
+        softAssert.assertEquals(loan.getApr(), driver.findElement(apr).getText());
         softAssert.assertAll();
 
     }

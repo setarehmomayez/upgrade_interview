@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 public class CreateAccountPage extends BasePageObject {
     private By emailElement = By.name("username");
     private By passwordElement = By.name("password");
-    private By checkBox=By.xpath("//*[@id=\"root\"]/div/main/div/div[1]/div[2]/div[1]/div/div/form/div[2]/div/label/div[1]");
+    private By checkBox=By.className("sc-fzqKxP");
     private By checkRateBtn= By.xpath("//button[@type='submit']");
 
 

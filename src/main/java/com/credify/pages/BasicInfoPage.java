@@ -23,15 +23,6 @@ public class BasicInfoPage extends BasePageObject {
         super(driver, log);
     }
 
-    public void enterFirstName(String name) {
-        log.info("Entering First Name: " + name);
-        type(name, firstName);
-    }
-
-    public void enterLastName(String name) {
-        log.info("Entering Last Name: " + name);
-        type(name, lastName);
-    }
 
     public void enterRandomFirstName() {
         log.info("Entering First Name");

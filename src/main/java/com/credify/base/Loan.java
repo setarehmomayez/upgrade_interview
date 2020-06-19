@@ -9,6 +9,6 @@ public class Loan {
     private String monthlyPayment;
     private String term;
     private String interestRate;
-    private String arp;
+    private String apr;
 
 }
